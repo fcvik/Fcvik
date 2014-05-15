@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- Tips: 腾讯：@程飞，新浪：@程飞这名字暂停使用 | Wujing &copy; Dev Team -->
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="Fee">
+<meta name="copyright" content="&copy; 2014 Wujing.">
+<title>好玩</title>
+<script src="jquery.js" type="text/javascript"></script>
+</head>
+<body>
+<style type="text/css">
+	/*** 通用样式 ***/
+	* { margin: 0; padding: 0; word-wrap: break-word; }
+	body { font: 12px/1.75 "宋体", arial, sans-serif, 'DejaVu Sans', 'Lucida Grande', Tahoma, 'Hiragino Sans GB', STHeiti, SimSun, sans-serif; color: #444; margin: 0; padding: 0; }
+	body { background: #fff; }
+	* html,* html body { background-image: url(about:blank); background-attachment: fixed; } /* ie6的position: fixed和滚动抖动hack */
+	a { color: #333; text-decoration: none; }
+	a:hover { text-decoration: none; }
+	a img { border: none; } 
+	div,ul,li,p,form { padding: 0px; margin: 0px; list-style-type: none; }
+	em { font-style: normal; font-weight: normal; }
+	table { padding: 0px; margin: 0px; list-style-type: none; }
+	dt,dl,dd { padding: 0px; margin: 0px; list-style-type: none; }
+	form { margin: 0px; padding: 0px; }
+	tr { padding: 0px; margin: 0px; list-style-type: none; }
+	h3,h4 { padding: 0px; font-size: 14px; font-weight: bold; }
+	.clear { clear: both; height: 0px; overflow: hidden; }
+	.l { display: block; float: left; }
+	.r { display: block; float: right; }
+
+	a.button { display: block; width: 200px; height: 45px; background-color: #6ab2f4; position: absolute; top: 200px; left: 200px; }
+</style>
+
+<script type="text/javascript">
+	$(document).ready(function (){
+		$('a.button').click(function (){
+			bodyWidth = $(window).width();
+			bodyHeight = $(window).height();
+			thisWidth = $(this).width();
+			thisHeight = $(this).height();
+			newWidth = bodyWidth;
+			newHeight = bodyHeight;
+			_left = (bodyWidth - newWidth) / 2;
+			_top = (bodyHeight - newHeight) / 2;
+			$(this).stop(true).animate({
+				width : newWidth,
+				height : newHeight,
+				top : _top,
+				left : _left,
+			})
+		})
+	})
+</script>
+
+<a class="button" href="javascript:void(0)"></a>
+<div></div>
+</body>
+</html>
